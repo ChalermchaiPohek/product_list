@@ -23,6 +23,12 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Categories", style: TextStyle(fontWeight: FontWeight.bold),),
+        leading: IconButton(
+          onPressed: () {
+            /// TODO: implement to open the drawer.
+          },
+          icon: Icon(Icons.dehaze),
+        ),
       ),
       body: SafeArea(
         child: _buildContent(context),

@@ -24,7 +24,14 @@ class _ProductListScreenState extends State<ProductListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Category name", style: TextStyle(fontWeight: FontWeight.bold),),
+        leading: IconButton(
+          onPressed: () {
+            /// TODO: implement to open the drawer.
+          },
+          icon: Icon(Icons.dehaze),
+        ),
       ),
+
       body: SafeArea(
         child: _buildContent(context),
       ),

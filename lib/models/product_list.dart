@@ -2,8 +2,6 @@ import 'dart:convert';
 
 Products productsFromJson(String str) => Products.fromJson(json.decode(str));
 
-// String productsToJson(Products data) => json.encode(data.toJson());
-
 class Products {
   final List<Product>? products;
   final int? total;
@@ -23,13 +21,6 @@ class Products {
     skip: json["skip"],
     limit: json["limit"],
   );
-
-  // Map<String, dynamic> toJson() => {
-  //   "products": products == null ? null : List<dynamic>.from(products!.map((x) => x.toJson())),
-  //   "total": total,
-  //   "skip": skip,
-  //   "limit": limit,
-  // };
 }
 
 class Product {
@@ -106,41 +97,7 @@ class Product {
     thumbnail: json["thumbnail"],
   );
 
-  // Map<String, dynamic> toJson() => {
-  //   "id": id,
-  //   "title": title,
-  //   "description": description,
-  //   "category": category,
-  //   "price": price,
-  //   "discountPercentage": discountPercentage,
-  //   "rating": rating,
-  //   "stock": stock,
-  //   "tags": tags,
-  //   "brand": brand,
-  //   "sku": sku,
-  //   "weight": weight,
-  //   "dimensions": dimensions.toJson(),
-  //   "warrantyInformation": warrantyInformation,
-  //   "shippingInformation": shippingInformation,
-  //   "availabilityStatus": availabilityStatus,
-  //   "reviews": List<dynamic>.from(reviews.map((x) => x.toJson())),
-  //   "returnPolicy": returnPolicy,
-  //   "minimumOrderQuantity": minimumOrderQuantity,
-  //   "meta": meta.toJson(),
-  //   "images": List<dynamic>.from(images.map((x) => x)),
-  //   "thumbnail": thumbnail,
-  // };
 }
-
-// enum Category {
-//   FRAGRANCES,
-//   PERFUMES
-// }
-
-// final categoryValues = EnumValues({
-//   "fragrances": Category.FRAGRANCES,
-//   "perfumes": Category.PERFUMES
-// });
 
 class Dimensions {
   final double width;
@@ -225,15 +182,3 @@ class Review {
     "reviewerEmail": reviewerEmail,
   };
 }
-
-// class EnumValues<T> {
-//   Map<String, T> map;
-//   late Map<T, String> reverseMap;
-//
-//   EnumValues(this.map);
-//
-//   Map<T, String> get reverse {
-//     reverseMap = map.map((k, v) => MapEntry(v, k));
-//     return reverseMap;
-//   }
-// }

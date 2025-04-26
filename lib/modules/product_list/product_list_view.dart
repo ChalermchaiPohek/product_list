@@ -52,6 +52,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                 title: Text("lang_th".tr),
                 onTap: () async {
                   await Get.updateLocale(Locale("th", "TH"));
+                  Get.back();
                 },
               ),
               UIConst.hDivider,
@@ -62,6 +63,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                 title: Text("lang_en".tr),
                 onTap: () async {
                   await Get.updateLocale(Locale("en", "US"));
+                  Get.back();
                 },
               ),
             ],

@@ -37,6 +37,8 @@ dependencies:
   get: ^4.6.6 # https://pub.dev/packages/get
   http: ^1.3.0 # https://pub.dev/packages/http
   cached_network_image: ^3.4.1 # https://pub.dev/packages/cached_network_image
+  flag: ^7.0.0 # https://pub.dev/packages/flag
+  flutter_localization: ^0.3.2 # https://pub.dev/packages/flutter_localization
 
 dev_dependencies:
   flutter_test:

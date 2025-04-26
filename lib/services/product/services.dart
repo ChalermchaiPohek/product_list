@@ -12,7 +12,8 @@ class ProductService extends GetxService {
     try {
       String url = AppConst.getCategories;
       final response = await http.get(Uri.parse(url));
-      return jsonDecode(response.body).map((e) => Categories.fromJson(e),).toList();
+      final List respData = jsonDecode(response.body);
+      return respData.map((e) => Categories.fromJson(e),).toList();
     } catch (error, s) {
       if (kDebugMode) {
         print(s.toString());
